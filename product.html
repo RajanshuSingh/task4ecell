@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="tejas.css">
+  <style>.product-container {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap:wrap;
+  }
+  
+  .product {
+    color:navajowhite;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .product img {
+   border: 3px solid #3f4b48;
+   border-radius: 5px;
+    width: 200px;
+    height: 210px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #3f4b48;
+
+  }
+  .product img:hover {
+  opacity: 0.8;
+  box-shadow: 0 5px 20px rgba(151, 149, 49, 0.637);  
+ 
+}
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+  
+  .close {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+button{
+    padding: 2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: lightgreen;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow:0 0 10px rgb(25, 214, 25);
+}
+button:hover{
+    background-color: rgb(207, 207, 86);
+    transform: scale(1.1) ;
+transition-duration: 1s;
+
+}
+  </style>
+</head>
+<body>
+
+ 
+  <header>
+    <div class="container">
+      <h1 id="logo">तेjas&#9992;</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="product.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="testimonial.html">Testimonials</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="product-container">
+    <table>
+      <tr>
+        <td class="product">
+          <img src="tee1.jpg" alt="Product 1" onclick="zoomImage('tee1.jpg')">
+          <p>MarCos T-shirt</p>
+          <p>From &#8377;799/-</p>
+          <button onclick="addToCart('Product 1')">Add to Cart 	&#128722;</button>
+        </td>
+        <td class="product">
+          <img src="tee2.jpg" alt="Product 2" onclick="zoomImage('tee2.jpg')">
+          <p>Gorkha Regiment T-shirt</p>
+          <p>From &#8377;399/-</p>
+          <button onclick="addToCart('Product 2')">Add to Cart &#128722;</button>
+        </td>
+        <td class="product">
+          <img src="tee3.jpg" alt="Product 3" onclick="zoomImage('tee3.jpg')">
+          <p>Sniper T-shirt</p>
+          <p>From &#8377;799/-</p>
+          <button onclick="addToCart('Product 3')">Add to Cart &#128722;</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="product">
+          <img src="tee4.jpg" alt="Product 4" onclick="zoomImage('tee4.jpg')">
+          <p>Tiger Hill T-shirt</p>
+          <p>From &#8377;499/-</p>
+          <button onclick="addToCart('Product 4')">Add to Cart &#128722;</button>
+        </td>
+        <td class="product">
+          <img src="tee5.jpg" alt="Product 5" onclick="zoomImage('tee5.jpg')">
+          <p>Garud CF T-shirt</p>
+          <p>From &#8377;999/-</p>
+          <button onclick="addToCart('Product 5')">Add to Cart &#128722;</button>
+        </td>
+        <td class="product">
+          <img src="tee6.jpg" alt="Product 6" onclick="zoomImage('tee6.jpg')">
+          <p>Para SF T-shirt</p>
+          <p>From &#8377;499/-</p>
+          <button onclick="addToCart('Product 6')">Add to Cart &#128722;</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  
+  <div id="zoomModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img src="" alt="Zoomed Image" id="zoomImage" class="modal-content">
+  </div>
+
+ 
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Tejas. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="product.js"></script>
+</body>
+</html>
