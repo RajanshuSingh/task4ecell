@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  #logo {
+    font-family: "Goudy Old Style", "Gill Sans", "Gill Sans MT", "Calibri",
+      "Trebuchet MS", sans-serif;
+    color: rgb(223, 214, 163);
+    font-size: 33px;
+    font-weight: bold;
+    /* margin-right: 20px; */
+    padding-left: 40px;
+    margin-top: 30px;
+
+  align-items: center;
+  
+  display: inline-block;
+
+  
+  }
+header  {
+  height: fit-content;
+    background-image: url(camo1.jpg);
+    
+  }
+
+  header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 20px;
+  }
+
+  
+
+  header nav ul {padding-right: 20px;
+    padding-bottom: 20px;
+    list-style-type: none;
+    text-align: right;
+    align-items: center;
+    /* align-content: center; */
+    /* display: inline; */
+  }
+
+  header nav ul li {
+    padding-bottom: 20px;
+  
+    text-align: right;
+    display:inline;
+align-content: center;
+
+    /* margin-right: 20px; */
+  }
+
+  header nav ul li a {padding   : 5px 5px;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', "Times New Roman", serif;
+    color: #d3ebe7;
+    text-decoration: none;
+    font-size: 20px;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  body {
+    background-color: #4a6d65;
+    font-family: Arial, sans-serif;
+    /* background-image: -moz-linear-gradient( 0deg, orange 0%, green 100%); */
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  
+
+  .hero {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(orange, white, green);
+    padding: 50px 0;
+    text-align: center;
+  }
+
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+footer {
+    /* color:darkkhaki; */
+    background-image: url(camo.jpg);
+    padding: 20px 0;
+    text-align: right;
+    color: #d3ebe7;
+  }
