@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - TEJAS</title>
+    <link rel="stylesheet" href="tejas.css">
+    <style>.accordion-item {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    .about-content {
+        color: greenyellow;
+        font-family: papyrus, fantasy, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    /* background-color: #eee; */
+    background-image:url(camo1.jpg);
+    padding: 50px 20px;
+    /* text-align: center; */
+    text-shadow: 2px 2px 4px #000000;
+    }
+
+    p{
+        font-size: 20px;
+    }
+   
+    h2{
+        font-size: 40px;
+        margin: 10px 10px 10px 10px;
+    }
+
+
+    .accordion-header {
+        background-color:rgb(235, 180, 78);
+        color: #333;
+        font-family:Helvetica,Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+        border-radius: 5px;
+        border-color:darkslategray;
+        cursor: pointer;
+        outline: none;
+        font-size: larger;
+    }
+    
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contain">
+            <h1 id="logo">तेjas&#9992;</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Why Tejas?</h2>
+                <p>Learn more about our one-stop destination for Defence Merch.</p>
+            </div>
+        </section>
+
+        <section class="about-content">
+            <div class="container">
+                <h2>Our Story &#9882;</h2>
+                <div class="accordion-item">
+                    <button class="accordion-header">Our Mission  &#10159;</button>
+                    <div class="accordion-content">
+                        <p>Our mission is simple yet profound—to pay homage to the indomitable spirit of the Indian Armed Forces through our products. We strive to embody their courage, determination, and patriotism, ensuring their stories endure through our offerings.
+                            Our mission is to offer a wide range of products, from apparel to accessories, that reflect the spirit of patriotism and honor our armed forces.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">Our Vision  &#10159;</button>
+                    <div class="accordion-content">
+                        <p>At Tejas, we are fueled by a vision deeply rooted in the valor and grit of the Indian Armed Forces. Our mission resonates with their spirit, driving us to honor their legacy, resilience, and unwavering commitment to our nation.
+                            We envision a world where individuals can express their support for our armed forces through high-quality, meaningful merchandise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tejas. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+
+    accordionItems.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        const content = item.querySelector('.accordion-content');
+
+        header.addEventListener('click', function() {
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                header.classList.remove('active');
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                header.classList.add('active');
+            }
+        });
+    });
+});
+
+    </script>
+</body>
+</html>
